@@ -1,2 +1,2 @@
 # LeMao
-vao la gay
+thang nao tao cái res nay là 
