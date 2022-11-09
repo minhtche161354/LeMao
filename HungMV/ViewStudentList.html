@@ -1,0 +1,871 @@
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>FPT University Academic Portal</title>
+    <link
+      rel="Stylesheet"
+      href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"
+      type="text/css"
+    />
+    <link rel="Stylesheet" href="../fu.css" type="text/css" />
+    <link rel="Stylesheet" href="../JavaScript/jquery.css" type="text/css" />
+    <link rel="Stylesheet" href="../JavaScript/jquery-ui.css" type="text/css" />
+    <link
+      rel="Stylesheet"
+      href="../JavaScript/jquery.alerts.css"
+      type="text/css"
+    />
+    <script src="../JavaScript/jquery.min.js" type="text/javascript"></script>
+    <script src="../JavaScript/jquery_002.js" type="text/javascript"></script>
+    <script src="../JavaScript/jquery_003.js" type="text/javascript"></script>
+    <script src="../JavaScript/jquery.js" type="text/javascript"></script>
+    <script src="../JavaScript/jquery-1.8.3.js" type="text/javascript"></script>
+    <script src="../JavaScript/jquery-ui.js" type="text/javascript"></script>
+    <script
+      src="../JavaScript/jquery.alerts.js"
+      type="text/javascript"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style type="text/css">
+      body {
+        font-size: 15;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1><span>FPT University Academic Portal</span></h1>
+        </div>
+        <div class="col-md-4">
+          <table>
+            <tr>
+              <td colspan="2" class="auto-style1">
+                <strong>FAP mobile app (myFAP) is ready at</strong>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://apps.apple.com/app/id1527723314">
+                  <img
+                    src="https://fap.fpt.edu.vn/images/app-store.svg"
+                    style="width: 120px; height: 40px"
+                    alt="apple store"
+                /></a>
+              </td>
+              <td>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.fuct"
+                >
+                  <img
+                    src="https://fap.fpt.edu.vn/images/play-store.svg"
+                    style="width: 120px; height: 40px"
+                    alt="google store"
+                /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div>
+        <ol class="breadcrumb">
+          <li>
+            <span id="ctl00_lblNavigation"
+              ><a href="../Student.aspx">Home</a>&nbsp;|&nbsp;<b
+                >Groups</b
+              ></span
+            >
+          </li>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div
+            id="ctl00_divUser"
+            style="float: right; float: top; margin-right: 16px"
+          >
+            <a href="?view=user">
+              <span id="ctl00_lblLogIn" class="label label-success"
+                >User</span
+              ></a
+            >
+            | <a href="?logout=true" class="label label-success">logout</a> |
+            <span id="ctl00_lblCampusName" class="label label-success">
+              CAMPUS: FPTU-Hòa Lạc</span
+            >
+          </div>
+        </ol>
+      </div>
+      <br />
+      <br />
+      <br />
+      <div class="text-left breadcrumb" style="font-weight: 550; color: darkgray">
+        Select a course, then a goup ...
+      </div>
+
+      <table>
+        <tbody>
+          <tr style="border-bottom: 0 none">
+            <td>
+              <div>
+                <table summary="Select a group">
+                  <thead>
+                    <tr>
+                      <th scope="col">Campus</th>
+                      <th scope="col">Term</th>
+                      <th scope="col">Department</th>
+                      <th scope="col">Course</th>
+                      <th scope="col">Group</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        <div id="ctl00_mainContent_divCampus">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td><b>FU-HL</b></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <div id="ctl00_mainContent_divTerm">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=18">Summer2017</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=19">Fall2017</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=20">Spring2018</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=21">Summer2018</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=22">Fall2018</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=23">Spring2019</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=24">Summer2019</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=25">Fall2019</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=26">Spring2020</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=27">Summer2020</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=28">Fall2020</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=29">Spring2021</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=30">Summer2021</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=31">Fall2021</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=32">Spring2022</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=33">Summer2022</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><b>Fall2022</b></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <div id="ctl00_mainContent_divDepartment">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=64"
+                                    >Artificial Intelligence</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=63"
+                                    >BLOC</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=65"
+                                    >Business Administration</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=59"
+                                    >Computer Science</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><b>Computing Fundamental</b></td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=28"
+                                    >English</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=29"
+                                    >English Preparation Course</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=56"
+                                    >Finance</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=57"
+                                    >Graduate</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=51"
+                                    >Graphic Design</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=53"
+                                    >Information Assurance</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=30"
+                                    >Information Technology Specialization</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=31"
+                                    >Japanese</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=66"
+                                    >Korean</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=54"
+                                    >LAB</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=61"
+                                    >Little UK</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=58"
+                                    >Management</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=32"
+                                    >Mathematics</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=62"
+                                    >Multimedia Communications</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=33"
+                                    >On the job training</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=60"
+                                    >OR</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=34"
+                                    >Physical Training</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=35"
+                                    >Soft Skill</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=36"
+                                    >Software Engineering</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=55"
+                                    >Start Your Business</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=52"
+                                    >Traditional Instrument</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="?campus=3&amp;term=37&amp;dept=43"
+                                    >Vietnamese</a
+                                  >
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <div id="ctl00_mainContent_divCourse">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=16"
+                                    >Data Structures and Algorithms</a
+                                  >
+                                  (CSD201)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=1019"
+                                    >Data Structures and Algorithm with
+                                    Python</a
+                                  >
+                                  (CSD203)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=110"
+                                    >Advanced Algorithms</a
+                                  >
+                                  (CSD301)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=17"
+                                    >Introduction to Databases</a
+                                  >
+                                  (DBI202)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=81"
+                                    >Data warehouse</a
+                                  >
+                                  (DBW301)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=67"
+                                    >Japanese IT Fundamentals</a
+                                  >
+                                  (JFE301)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=803"
+                                    >Computer Networking</a
+                                  >
+                                  (NWC203c)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=13"
+                                    >Operating Systems</a
+                                  >
+                                  (OSG202)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=1013"
+                                    >Programming Fundamentals with Python</a
+                                  >
+                                  (PFP191)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=1037"
+                                    >Excel Skills for Business</a
+                                  >
+                                  (PRE201c)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=3"
+                                    >Programming Fundamentals</a
+                                  >
+                                  (PRF192)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=895"
+                                    >Java Web Application Development</a
+                                  >
+                                  (PRJ301)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=1069"
+                                    >Java Web Application Development</a
+                                  >
+                                  (PRJ302)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <b
+                                    >Basic Cross-Platform Application
+                                    Programming With .NET (PRN211)</b
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=963"
+                                    >Advanced Cross-Platform Application
+                                    Programming With .NET</a
+                                  >
+                                  (PRN221)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=1002"
+                                    >Building Cross-Platform Back-End
+                                    Application With .NET</a
+                                  >
+                                  (PRN231)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=47"
+                                    >Object-Oriented Programming</a
+                                  >
+                                  (PRO192)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=1012"
+                                    >C# Programming and Unity</a
+                                  >
+                                  (PRU211m)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=1001"
+                                    >Object-Oriented Programming for Unity
+                                    Games</a
+                                  >
+                                  (PRU221m)
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a
+                                    href="?campus=3&amp;term=37&amp;dept=27&amp;course=661"
+                                    >Web Design</a
+                                  >
+                                  (WED201c)
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <div id="ctl00_mainContent_divGroup">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td><a href="?group=29763">PRN211.E-BL5</a></td>
+                                <td>
+                                  <a href="?group=29765">PRN211.E1-BL5</a>
+                                </td>
+                                <td><a href="?group=28829">PRN211.E4</a></td>
+                                <td><a href="?group=29773">PRN211.M-BL5</a></td>
+                              </tr>
+                              <tr>
+                                <td><a href="?group=28834">PRN211.M4</a></td>
+                                <td><a href="?group=27401">SE1626-NET</a></td>
+                                <td><a href="?group=27404">SE1627-NET</a></td>
+                                <td><a href="?group=27403">SE1628-NET</a></td>
+                              </tr>
+                              <tr>
+                                <td><b>SE1629-NET</b></td>
+                                <td><a href="?group=27397">SE1630-NET</a></td>
+                                <td><a href="?group=27407">SE1631-NET</a></td>
+                                <td><a href="?group=27396">SE1632-NET</a></td>
+                              </tr>
+                              <tr>
+                                <td><a href="?group=27400">SE1633-NET</a></td>
+                                <td><a href="?group=27408">SE1634-NET</a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div id="ctl00_mainContent_divStudents">
+                  <table class="sortable" id="id" summary="Student list">
+                    <div class="breadcrumb">
+                      ... then see student list (<a
+                        href="Groups.aspx?group=27405&amp;export=1"
+                        >Export data</a
+                      >)
+                    </div>
+                    <thead>
+                      <tr>
+                        <th>Index</th>
+                        <th>Image</th>
+                        <th>Member</th>
+                        <th>Code</th>
+                        <th>Surname</th>
+                        <th>Middle name</th>
+                        <th>Given name</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                      <tr>
+                        <td>20</td>
+                        <td>
+                          <center>
+                            <img
+                              alt="HE160614"
+                              src="../ImageHandler.ashx?RollNumber=HE160614&amp;Campus=3"
+                              style="
+                                height: 146px;
+                                width: 111px;
+                                border-width: 0px;
+                              "
+                            />
+                          </center>
+                        </td>
+                        <td>
+                          <a
+                            href="../User/StudentDetails.aspx?rollNumber=HE160614"
+                            >ThaiLSHE160614</a
+                          >
+                        </td>
+                        <td>HE160614</td>
+                        <td>Lê</td>
+                        <td>Sỹ</td>
+                        <td>Thái</td>
+                      </tr>
+                      <tr>
+                        <td>21</td>
+                        <td>
+                          <center>
+                            <img
+                              alt="HE161354"
+                              src="../ImageHandler.ashx?RollNumber=HE161354&amp;Campus=3"
+                              style="
+                                height: 146px;
+                                width: 111px;
+                                border-width: 0px;
+                              "
+                            />
+                          </center>
+                        </td>
+                        <td>
+                          <a
+                            href="../User/StudentDetails.aspx?rollNumber=HE161354"
+                            >MinhTCHE161354</a
+                          >
+                        </td>
+                        <td>HE161354</td>
+                        <td>Trần</td>
+                        <td>Công</td>
+                        <td>Minh</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>28</td>
+                        <td>
+                          <center>
+                            <img
+                              alt="HE163655"
+                              src="../ImageHandler.ashx?RollNumber=HE163655&amp;Campus=3"
+                              style="
+                                height: 146px;
+                                width: 111px;
+                                border-width: 0px;
+                              "
+                            />
+                          </center>
+                        </td>
+                        <td>
+                          <a
+                            href="../User/StudentDetails.aspx?rollNumber=HE163655"
+                            >HungMVHE163655</a
+                          >
+                        </td>
+                        <td>HE163655</td>
+                        <td>Mai</td>
+                        <td>Việt</td>
+                        <td>Hùng</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+                <input
+                  name="ctl00$mainContent$txtError"
+                  type="hidden"
+                  id="ctl00_mainContent_txtError"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr style="border-bottom: 0 none">
+            <td>
+              <br />
+              <table
+                width="100%"
+                style="border: 1px solid transparent"
+                id="cssTable"
+              >
+                <tbody>
+                  <tr>
+                    <td>
+                      <div id="ctl00_divSupport">
+                        <br />
+                        <b>Mọi góp ý, thắc mắc xin liên hệ: </b
+                        ><span
+                          style="
+                            color: rgb(34, 34, 34);
+                            font-family: arial, sans-serif;
+                            font-size: 13.333333969116211px;
+                            font-style: normal;
+                            font-variant: normal;
+                            font-weight: normal;
+                            letter-spacing: normal;
+                            line-height: normal;
+                            orphans: auto;
+                            text-align: start;
+                            text-indent: 0px;
+                            text-transform: none;
+                            white-space: normal;
+                            widows: auto;
+                            word-spacing: 0px;
+                            -webkit-text-stroke-width: 0px;
+                            background-color: rgb(255, 255, 255);
+                            display: inline !important;
+                            float: none;
+                          "
+                          >Phòng dịch vụ sinh viên</span
+                        >: Email:
+                        <a href="mailto:dichvusinhvien@fe.edu.vn"
+                          >dichvusinhvien@fe.edu.vn</a
+                        >. Điện thoại:
+                        <span
+                          class="style1"
+                          style="
+                            color: rgb(34, 34, 34);
+                            font-family: arial, sans-serif;
+                            font-size: 13.333333969116211px;
+                            font-style: normal;
+                            font-variant: normal;
+                            letter-spacing: normal;
+                            line-height: normal;
+                            orphans: auto;
+                            text-align: start;
+                            text-indent: 0px;
+                            text-transform: none;
+                            white-space: normal;
+                            widows: auto;
+                            word-spacing: 0px;
+                            -webkit-text-stroke-width: 0px;
+                            background-color: rgb(255, 255, 255);
+                            display: inline !important;
+                            float: none;
+                          "
+                          >(024)7308.13.13
+                        </span>
+                        <br />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p style="text-align: center">
+                        © Powered by
+                        <a href="http://fpt.edu.vn" target="_blank"
+                          >FPT University</a
+                        >&nbsp;|&nbsp;
+                        <a href="http://cms.fpt.edu.vn/" target="_blank">CMS</a
+                        >&nbsp;|&nbsp;
+                        <a href="http://library.fpt.edu.vn" target="_blank"
+                          >library</a
+                        >&nbsp;|&nbsp;
+                        <a href="http://library.books24x7.com" target="_blank"
+                          >books24x7</a
+                        >
+                        <span id="ctl00_lblHelpdesk"></span>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
